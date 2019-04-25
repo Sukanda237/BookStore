@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-BookStore-41ACD3F0-10C3-4659-91A6-62066D8A4BF9</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20190313035112_Membuatdatabase.cs" />
+    <Compile Remove="Data\Migrations\20190313035112_Membuatdatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190313041850_tambahtabelbook.cs" />
+    <Compile Remove="Data\Migrations\20190313041850_tambahtabelbook.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190313070137_cek.cs" />
+    <Compile Remove="Data\Migrations\20190313070137_cek.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190314042717_barunyampeuserviewmodel.cs" />
+    <Compile Remove="Data\Migrations\20190314042717_barunyampeuserviewmodel.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190314045918_modelberes.cs" />
+    <Compile Remove="Data\Migrations\20190314045918_modelberes.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190314080614_perbaikanmodel.cs" />
+    <Compile Remove="Data\Migrations\20190314080614_perbaikanmodel.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190315021206_sampaicontrollercategory.cs" />
+    <Compile Remove="Data\Migrations\20190315021206_sampaicontrollercategory.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190315065920_perbaharuitabel.cs" />
+    <Compile Remove="Data\Migrations\20190315065920_perbaharuitabel.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190315091632_tambahdatabase.cs" />
+    <Compile Remove="Data\Migrations\20190315091632_tambahdatabase.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

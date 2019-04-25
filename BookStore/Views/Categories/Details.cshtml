@@ -1,0 +1,79 @@
+﻿@model BookStore.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="page-title">
+    <div class="title_left">
+        <h3>Details Category</h3>
+    </div>
+
+    <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Details Category</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                    <div class="form-group">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="Name">
+                            @*Author's Name <span class="required">*</span>*@
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" >
+                                @Html.DisplayFor(model => model.Name)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                            <a asp-action="Edit" asp-route-id="@Model.CategoryID"><i class="panel_toolbox"></i>Edit</a> |
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<h2>Details Category</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CategoryID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@

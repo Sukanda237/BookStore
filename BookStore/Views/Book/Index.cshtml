@@ -1,0 +1,114 @@
+﻿@model IEnumerable<BookStore.Models.BookViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Book</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>List Book</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a asp-action="Create"><i class="fa fa-plus"></i> Add Data</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+
+                    <div class="table-responsive">
+                        <table class="table table-striped jambo_table bulk_action">
+                            <thead>
+                                <tr class="headings">
+                                    <th>
+                                        <input type="checkbox" id="check-all" class="flat">
+                                    </th>
+                                    <th class="column-title">
+                                        @*@Html.DisplayNameFor(model => model.Title)*@
+                                        <p>Cover</p>
+                                    </th>
+                                    <th class="column-title">
+                                        @*@Html.DisplayNameFor(model => model.Title)*@
+                                        <p>Category</p>
+                                    </th>
+                                    <th class="column-title">
+                                        @*@Html.DisplayNameFor(model => model.Title)*@
+                                        <p>Title</p>
+                                    </th>
+                                    <th class="column-title">
+                                        @*@Html.DisplayNameFor(model => model.Price)*@
+                                        <p>Publish Date</p>
+                                    </th>
+                                    <th class="column-title">
+                                        @*@Html.DisplayNameFor(model => model.Quantity)*@
+                                        <p>Qty</p>
+                                    </th>
+                                    <th class="column-title no-link last">
+                                    <p>Action</p>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr class="odd pointer">
+                                    <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CategoryName)                                        
+                                    </td>
+                                    <td>
+                                        <p>Title : </p> @Html.DisplayFor(modelItem => item.Title) 
+                                        <p>ISBN : </p> @Html.DisplayFor(modelItem => item.ISBN) 
+                                        <p>Author : </p> @Html.DisplayFor(modelItem => item.AuthorNames) <br />
+                                        <p>Price : </p> @Html.DisplayFor(modelItem => item.Price) <br />
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PublishDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Quantity)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.ISBN">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.ISBN">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.ISBN">Delete</a>
+                                    </td>
+                                </tr>
+                                }
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        
